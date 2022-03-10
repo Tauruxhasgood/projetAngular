@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <div class="card">
+
+        <add-filiere></add-filiere>
+
+        <h3 class="text-center">Liste des Filières</h3>
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <th>Id</th>
+                    <th>Libelle</th>
+                    
+                </thead>
+                <tbody>
+                    <tr *ngFor="let filiere of filieres">
+                        <td >{{ filiere.id }}</td>
+                        <td><a [routerLink]="['/filiereDetail', '{{ filiere.id }}']">{{ filiere.libelle }}</a>
+                            
+                            <update-filiere [filiere]="filiere"></update-filiere>
+                        </td>
+                        <td><filiere-detail
+                            [filiere]="filiere"></filiere-detail></td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                
+            </div>
+
+        </div>
+    </div>
+</div>

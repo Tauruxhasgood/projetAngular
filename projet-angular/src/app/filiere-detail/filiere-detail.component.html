@@ -1,0 +1,9 @@
+
+<button (click)="handleClick()">
+Afficher les détails
+</button>
+
+<div *ngIf="filiere != null">
+    <p [(ngModel)]="filiereId">{{ filiere.id }}</p>
+
+</div>
